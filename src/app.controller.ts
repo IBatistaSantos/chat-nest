@@ -10,4 +10,9 @@ export class AppController {
   root() {
     return { message: 'Hello World!' };
   }
+
+  @Get('api/v1/chat')
+  async listMessages() {
+    return await this.appService.listMessages();
+  }
 }
